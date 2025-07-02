@@ -1,0 +1,64 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/ARGOeu/argo-acc-library:
+      branch: devel
+      repo: https://github.com/ARGOeu/argo-acc-library
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: main
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/ARGOeu/argo-acc-library git:
+        commands:
+        - /usr/bin/env sh .sqa/script.dorky-pear-bloodhound.sh
+        container: qc.acc_homey-mustard-hound
+  QC.Doc:
+    repos:
+      github.com/ARGOeu/argo-acc-library find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.fuzzy-salmon-spitz.sh
+        container: qc.doc_gimpy-taupe-woodlouse
+      github.com/ARGOeu/argo-acc-library git:
+        commands:
+        - /usr/bin/env sh .sqa/script.cloudy-sepia-turtle.sh
+        container: qc.doc_thirsty-cerulean-ocelot
+      github.com/ARGOeu/argo-acc-library markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.seedy-apricot-rhinoceros.sh
+        container: qc.doc_sloppy-bistre-angora
+  QC.Lic:
+    repos:
+      github.com/ARGOeu/argo-acc-library licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.frumpy-lilac-quetzal.sh
+        container: qc.lic_cranky-scarlet-zebra
+  QC.Sec:
+    repos:
+      github.com/ARGOeu/argo-acc-library bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.bumpy-bistre-macaw.sh
+        container: qc.sec_stinky-turquoise-grasshopper
+  QC.Sty:
+    repos:
+      github.com/ARGOeu/argo-acc-library flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.messy-rose-wildebeest.sh
+        container: qc.sty_sleepy-amber-kingfisher
+  QC.Uni:
+    repos:
+      github.com/ARGOeu/argo-acc-library pytest:
+        commands:
+        - /usr/bin/env sh .sqa/script.muzzy-periwinkle-quetzal.sh
+        container: qc.uni_skimpy-scarlet-opossum
+  QC.Ver:
+    repos:
+      github.com/ARGOeu/argo-acc-library get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.stealthy-flax-liger.sh
+        container: qc.ver_surly-aquamarine-molly
+timeout: 5400
