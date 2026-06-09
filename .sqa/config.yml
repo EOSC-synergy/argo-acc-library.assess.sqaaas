@@ -2,10 +2,10 @@ config:
   credentials: []
   project_repos:
     github.com/ARGOeu/argo-acc-library:
-      branch: devel
+      branch: main
       repo: https://github.com/ARGOeu/argo-acc-library
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: main
+      branch: feature/pynblint_fix
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
 environment:
   JPL_DOCKERFORCEBUILD: enabled
@@ -15,50 +15,50 @@ sqa_criteria:
     repos:
       github.com/ARGOeu/argo-acc-library git:
         commands:
-        - /usr/bin/env sh .sqa/script.dorky-pear-bloodhound.sh
-        container: qc.acc_homey-mustard-hound
+        - /usr/bin/env sh .sqa/script.carmine_generous_bullfrog.sh
+        container: qc.acc_puce_outgoing_cassowary
   QC.Doc:
     repos:
       github.com/ARGOeu/argo-acc-library find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.fuzzy-salmon-spitz.sh
-        container: qc.doc_gimpy-taupe-woodlouse
+        - /usr/bin/env sh .sqa/script.flint_anxious_axolotl.sh
+        container: qc.doc_mauve_melancholy_hummingbird
       github.com/ARGOeu/argo-acc-library git:
         commands:
-        - /usr/bin/env sh .sqa/script.cloudy-sepia-turtle.sh
-        container: qc.doc_thirsty-cerulean-ocelot
+        - /usr/bin/env sh .sqa/script.apricot_tenacious_camel.sh
+        container: qc.doc_chestnut_outgoing_seahorse
       github.com/ARGOeu/argo-acc-library markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.seedy-apricot-rhinoceros.sh
-        container: qc.doc_sloppy-bistre-angora
+        - /usr/bin/env sh .sqa/script.cream_logical_giraffe.sh
+        container: qc.doc_mahogany_gentle_lemur
   QC.Lic:
     repos:
       github.com/ARGOeu/argo-acc-library licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.frumpy-lilac-quetzal.sh
-        container: qc.lic_cranky-scarlet-zebra
+        - /usr/bin/env sh .sqa/script.saffron_lively_butterfly.sh
+        container: qc.lic_lime_bubbly_snail
   QC.Sec:
     repos:
       github.com/ARGOeu/argo-acc-library bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.bumpy-bistre-macaw.sh
-        container: qc.sec_stinky-turquoise-grasshopper
+        - /usr/bin/env sh .sqa/script.dawn_enigmatic_ibex.sh
+        container: qc.sec_lime_peaceful_tarantula
   QC.Sty:
     repos:
       github.com/ARGOeu/argo-acc-library flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.messy-rose-wildebeest.sh
-        container: qc.sty_sleepy-amber-kingfisher
+        - /usr/bin/env sh .sqa/script.claret_hopeful_rabbit.sh
+        container: qc.sty_crimson_amused_ferret
   QC.Uni:
     repos:
       github.com/ARGOeu/argo-acc-library pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.muzzy-periwinkle-quetzal.sh
-        container: qc.uni_skimpy-scarlet-opossum
+        - /usr/bin/env sh .sqa/script.heather_methodical_gnu.sh
+        container: qc.uni_coral_savvy_chameleon
   QC.Ver:
     repos:
       github.com/ARGOeu/argo-acc-library get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.stealthy-flax-liger.sh
-        container: qc.ver_surly-aquamarine-molly
+        - /usr/bin/env sh .sqa/script.cinnamon_cautious_hawk.sh
+        container: qc.ver_white_happy_buffalo
 timeout: 5400
