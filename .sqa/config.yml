@@ -15,50 +15,50 @@ sqa_criteria:
     repos:
       github.com/ARGOeu/argo-acc-library git:
         commands:
-        - /usr/bin/env sh .sqa/script.grege_bubbly_penguin.sh
-        container: qc.acc_cinnamon_cheerful_macaw
+        - /usr/bin/env sh .sqa/script.lilac_organized_kirin.sh
+        container: qc.acc_poppy_forgiving_hippopotamus
   QC.Doc:
     repos:
       github.com/ARGOeu/argo-acc-library find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.gray_amused_jaguar.sh
-        container: qc.doc_brown_friendly_tortoise
+        - /usr/bin/env sh .sqa/script.rosewater_focused_falcon.sh
+        container: qc.doc_ebony_dreamy_porcupine
       github.com/ARGOeu/argo-acc-library git:
         commands:
-        - /usr/bin/env sh .sqa/script.tide_tactful_frog.sh
-        container: qc.doc_polar_frugal_ostrich
+        - /usr/bin/env sh .sqa/script.fern_courageous_finch.sh
+        container: qc.doc_fern_organized_hydra
       github.com/ARGOeu/argo-acc-library markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.claret_bright_panther.sh
-        container: qc.doc_currant_kind_capybara
+        - /usr/bin/env sh .sqa/script.alabaster_grumpy_crocodile.sh
+        container: qc.doc_plum_gentle_ocelot
   QC.Lic:
     repos:
       github.com/ARGOeu/argo-acc-library licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.forest_kind_seahorse.sh
-        container: qc.lic_verdant_kind_llama
+        - /usr/bin/env sh .sqa/script.cornflower_frugal_pangolin.sh
+        container: qc.lic_azure_calm_viper
   QC.Sec:
     repos:
       github.com/ARGOeu/argo-acc-library bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.espresso_passionate_nymph.sh
-        container: qc.sec_puce_perceptive_tiger
+        - /usr/bin/env sh .sqa/script.dawn_dizzy_eagle.sh
+        container: qc.sec_cayenne_mischievous_rattlesnake
   QC.Sty:
     repos:
       github.com/ARGOeu/argo-acc-library flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.purple_analytical_kraken.sh
-        container: qc.sty_gold_delighted_condor
+        - /usr/bin/env sh .sqa/script.tundra_rugged_hyena.sh
+        container: qc.sty_pumpkin_patient_gorilla
   QC.Uni:
     repos:
       github.com/ARGOeu/argo-acc-library pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.sepia_audacious_boar.sh
-        container: qc.uni_glaucous_empathetic_giraffe
+        - /usr/bin/env sh .sqa/script.goldenrod_outgoing_mandrill.sh
+        container: qc.uni_lagoon_humble_unicorn
   QC.Ver:
     repos:
       github.com/ARGOeu/argo-acc-library get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.heather_intuitive_toad.sh
-        container: qc.ver_umber_timid_spren
+        - /usr/bin/env sh .sqa/script.prussian_thoughtful_roadrunner.sh
+        container: qc.ver_seafoam_wise_bear
 timeout: 5400
